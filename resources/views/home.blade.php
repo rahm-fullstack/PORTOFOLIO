@@ -71,7 +71,7 @@
       <div class="mx-auto max-w-7xl px-4">
         <div class="mt-4 rounded-2xl glass border border-slate-200 shadow-sm">
           <div class="flex items-center justify-between px-4 py-3">
-            <a href="#home" class="font-extrabold tracking-tight text-xl text-slate-900">Portfolio</a>
+
 
             <!-- Desktop Nav -->
             <nav class="hidden md:flex items-center gap-8 font-medium">
