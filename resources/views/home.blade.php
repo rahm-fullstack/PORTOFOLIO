@@ -17,6 +17,7 @@
       :root {
         --primary: #ffffff;
         --accent: #468A9A;
+        cursor: none;
       }
       html {
         scroll-behavior: smooth;
@@ -244,7 +245,7 @@
             <div class="image-shell aspect-[16/10] overflow-hidden">
               <img
                 class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
-                src="{{asset('images/cvzone')}}"
+                src="{{asset('images/cvzone.jpg')}}"
                 loading="lazy"
                 alt="Halaman design system dengan komponen tombol, kartu, tipografi, dan palet warna teal serta abu muda dalam grid rapi"
                 onerror="this.onerror=null; this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/77983dfb-3da9-406c-aa87-a488f72ec11e.png'; this.alt='Gambar pengganti untuk halaman design system';"
@@ -295,7 +296,7 @@
             <div class="image-shell aspect-[16/10] overflow-hidden">
               <img
                 class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
-                src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/95d8bbad-0698-4d2d-964a-7d8f1ea461f9.png"
+                src="{{asset('images/esp8266.jpg')}}"
                 loading="lazy"
                 alt="Grid portofolio dengan kartu-kartu putih berbayang tipis, gambar hero, dan tipografi kontras sederhana"
                 onerror="this.onerror=null; this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/56338ea1-7f34-4874-a3ba-69993141e1b7.png'; this.alt='Gambar pengganti untuk grid portofolio';"
@@ -336,8 +337,8 @@
               >
             </div>
             <div class="p-5">
-              <h3 class="font-semibold text-slate-900">Project I — Admin Panel</h3>
-              <p class="mt-2 text-slate-600">Panel administrasi dengan fokus efisiensi dan kejelasan.</p>
+              <h3 class="font-semibold text-slate-900">Database — Admin website</h3>
+              <p class="mt-2 text-slate-600">An administration panel focused on efficiency and clarity.</p>
             </div>
           </article>
         </div>
@@ -360,7 +361,7 @@
               <div class="image-shell w-28 h-28 rounded-2xl overflow-hidden border border-slate-200">
                 <img
                   class="w-full h-full object-cover"
-                  src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/09fcf0b3-20cb-4dda-b280-ec960e6659c2.png"
+                  src="{{asset('images/profile1.jpg')}}"
                   loading="lazy"
                   alt="Potret setengah badan dengan latar belakang putih bersih, gaya pencahayaan natural, wajah tersenyum ramah dengan pakaian kasual rapi, warna aksen teal halus"
                   onerror="this.onerror=null; this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/dafef5df-48a5-4ed5-9514-587d5b2f3413.png'; this.alt='Gambar potret pengganti profil, latar putih, teks: Profile Photo Unavailable';"
@@ -394,11 +395,11 @@
           </div>
 
           <div class="rounded-2xl border border-slate-200 bg-white p-6">
-            <h4 class="font-semibold text-slate-900">Ringkasan Keahlian</h4>
+            <h4 class="font-semibold text-slate-900">Skills Summary</h4>
             <ul class="mt-3 space-y-2 text-slate-700">
               <li class="flex items-start gap-3">
                 <i class="fa-regular fa-circle-check text-[#468A9A] mt-1"></i>
-                Development from prototype to actual useful tool.
+                Able to design innovative and renewable technologies
               </li>
               <li class="flex items-start gap-3">
                 <i class="fa-regular fa-circle-check text-[#468A9A] mt-1"></i>
@@ -411,7 +412,7 @@
             </ul>
 
             <div class="mt-6 rounded-xl border border-slate-200 p-4">
-              <p class="text-sm text-slate-500">My Project</p>
+              <p class="text-sm text-slate-500">my organization</p>
               <div class="mt-3 grid grid-cols-2 gap-3">
                 <div class="image-shell aspect-square rounded-xl overflow-hidden border border-slate-200">
                   <!--<img
@@ -551,6 +552,28 @@
     </button>
 
     <script>
+      
+      const glowCursor = document.createElement('div');
+      glowCursor.style.position = 'fixed';
+      glowCursor.style.top = '0';
+      glowCursor.style.left = '0';
+      glowCursor.style.width = '40px';
+      glowCursor.style.height = '40px';
+      glowCursor.style.borderRadius = '50%';
+      glowCursor.style.pointerEvents = 'none';
+      glowCursor.style.background = 'rgba(70, 138, 154, 0.4)'; // warna #468A9A dengan transparansi
+      glowCursor.style.boxShadow = '0 0 15px 8px rgba(70, 138, 154, 0.6)';
+      glowCursor.style.transform = 'translate(-50%, -50%)';
+      glowCursor.style.transition = 'top 0.010s ease, left 0.010s ease';
+      glowCursor.style.zIndex = '9999';
+      document.body.appendChild(glowCursor);
+
+      window.addEventListener('mousemove', e => {
+        glowCursor.style.top = e.clientY + 'px';
+        glowCursor.style.left = e.clientX + 'px';
+      });
+
+
       // Year in footer
       document.getElementById('year').textContent = new Date().getFullYear();
 
@@ -603,6 +626,7 @@
         else toTop.classList.add('hidden');
       });
       toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+      
     </script>
   </body>
 </html>
