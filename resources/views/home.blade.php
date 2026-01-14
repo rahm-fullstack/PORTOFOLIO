@@ -150,7 +150,7 @@
               <div class="image-shell relative w-72 h-72 md:w-80 md:h-80 rounded-3xl border border-slate-200 shadow-md overflow-hidden">
                 <img
                   class="w-full h-full object-cover"
-                  src="{{asset('images/profile1.jpg')}}"
+                  src="{{asset('images/profile.jpg')}}"
                   loading="lazy"
                   alt="Potret close-up bergaya minimalis: wajah seorang profesional dengan pencahayaan lembut, latar belakang putih bersih, palet warna netral, fokus pada ekspresi percaya diri dan ramah, komposisi pusat, estetika modern"
                   onerror="this.onerror=null; this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5ff915af-5290-421a-ae7c-1e5f5885e9a5.png'; this.alt='Gambar potret pengganti dengan latar belakang putih, teks: Portrait Unavailable';"
