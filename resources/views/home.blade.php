@@ -361,7 +361,7 @@
               <div class="image-shell w-28 h-28 rounded-2xl overflow-hidden border border-slate-200">
                 <img
                   class="w-full h-full object-cover"
-                  src="{{asset('images/profile1.jpg')}}"
+                  src="{{asset('images/profile.jpg')}}"
                   loading="lazy"
                   alt="Potret setengah badan dengan latar belakang putih bersih, gaya pencahayaan natural, wajah tersenyum ramah dengan pakaian kasual rapi, warna aksen teal halus"
                   onerror="this.onerror=null; this.src='https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/dafef5df-48a5-4ed5-9514-587d5b2f3413.png'; this.alt='Gambar potret pengganti profil, latar putih, teks: Profile Photo Unavailable';"
